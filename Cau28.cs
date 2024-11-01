@@ -59,6 +59,8 @@ namespace Ex01
         int score = 0;
         int eggsCaught = 0; // Counter for caught eggs
 
+        bool isPaused = false;
+
         bool gameOver = false; // Flag to check if the game is over
 
         // WindowsMediaPlayer objects for background and sound effects
@@ -197,6 +199,16 @@ namespace Ex01
         {
             if (gameOver) return; // Ignore key inputs if the game is over
 
+            if (e.KeyCode == Keys.Space) // Check for SpaceBar press
+            {
+                if (isPaused)
+                    ResumeGame(); // Resume the game if it's currently paused
+                else
+                    PauseGame(); // Pause the game if it's currently running
+            }
+
+            if (isPaused) return; // Ignore other key inputs if the game is paused
+
             if (e.KeyValue == 39 && (xBasket < this.ClientSize.Width - pbBasket.Width))
                 xBasket += xDeltaBasket;
             if (e.KeyValue == 37 && xBasket > 0)
@@ -204,14 +216,49 @@ namespace Ex01
             pbBasket.Location = new Point(xBasket, yBasket);
         }
 
-        // Function to check and increase the speed of egg and bomb
+        private void PauseGame()
+        {
+            isPaused = true;
+
+            // Stop all game timers
+            tmEgg.Stop();
+            tmChicken.Stop();
+            tmBomb.Stop();
+            tmHeart.Stop();
+
+            // Pause background music
+            backgroundMusic.controls.pause();
+            chickenSound.controls.pause();
+
+            lblGameOver.Text = "Game Paused";
+            lblGameOver.Visible = true;
+        }
+
+        private void ResumeGame()
+        {
+            isPaused = false;
+
+            // Resume all game timers
+            tmEgg.Start();
+            tmChicken.Start();
+            tmBomb.Start();
+            tmHeart.Start();
+
+            // Resume background music
+            backgroundMusic.controls.play();
+            chickenSound.controls.play();
+
+            lblGameOver.Visible = false; // Hide the "Paused" message
+        }
+
+// Function to check and increase the speed of egg and bomb
         private void CheckAndIncreaseSpeed()
         {
             if (score % 10 == 0) // Increase speed at every multiple of 10
             {
                 yDeltaEgg += 1; // Increase egg speed
                 yDeltaBomb += 1; // Increase bomb speed
-                yDeltaHeart += 1;
+                yDeltaHeart += 1; // Increase heart speed
             }
         }
 
