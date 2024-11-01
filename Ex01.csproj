@@ -206,12 +206,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\background_image.png" />
     <Content Include="Images\basket.png" />
     <Content Include="Images\bomb.png" />
     <Content Include="Images\bomb_explode.png" />
     <Content Include="Images\chicken.png" />
     <Content Include="Images\egg_gold.png" />
     <Content Include="Images\egg_gold_broken.png" />
+    <Content Include="Images\heart.png" />
+    <Content Include="Sounds\background_music.mp3" />
+    <Content Include="Sounds\background_music.wav" />
+    <Content Include="Sounds\bomb_explosion.mp3" />
+    <Content Include="Sounds\bomb_explosion.wav" />
+    <Content Include="Sounds\chicken.mp3" />
+    <Content Include="Sounds\chicken.wav" />
+    <Content Include="Sounds\egg_break.mp3" />
+    <Content Include="Sounds\egg_break.wav" />
+    <Content Include="Sounds\egg_catch.mp3" />
+    <Content Include="Sounds\egg_catch.wav" />
+    <Content Include="Sounds\game_over.mp3" />
+    <Content Include="Sounds\game_over.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

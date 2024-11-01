@@ -20,3 +20,5 @@ D:\C#\BuiHuuDanh_2122110119\Ex01\obj\Debug\Ex01.Cau24.resources
 D:\C#\BuiHuuDanh_2122110119\Ex01\obj\Debug\Ex01.Cau26.resources
 D:\C#\BuiHuuDanh_2122110119\Ex01\obj\Debug\Ex01.Cau27.resources
 D:\C#\BuiHuuDanh_2122110119\Ex01\obj\Debug\Ex01.Cau28.resources
+D:\C#\BuiHuuDanh_2122110119\Ex01\obj\Debug\Interop.WMPLib.dll
+D:\C#\BuiHuuDanh_2122110119\Ex01\obj\Debug\Ex01.csproj.ResolveComReference.cache

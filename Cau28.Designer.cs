@@ -55,7 +55,7 @@
             // 
             this.lblGameOver.AutoSize = true;
             this.lblGameOver.Location = new System.Drawing.Point(335, 206);
-            this.lblGameOver.MaximumSize = new System.Drawing.Size(100, 100);
+            this.lblGameOver.MaximumSize = new System.Drawing.Size(500, 500);
             this.lblGameOver.Name = "lblGameOver";
             this.lblGameOver.Size = new System.Drawing.Size(90, 16);
             this.lblGameOver.TabIndex = 2;
