@@ -256,9 +256,9 @@ namespace Ex01
         {
             if (score % 10 == 0) // Increase speed at every multiple of 10
             {
-                yDeltaEgg += 1; // Increase egg speed
-                yDeltaBomb += 1; // Increase bomb speed
-                yDeltaHeart += 1; // Increase heart speed
+                yDeltaEgg += 2; // Increase egg speed
+                yDeltaBomb += 2; // Increase bomb speed
+                yDeltaHeart += 2; // Increase heart speed
             }
         }
 
@@ -339,6 +339,7 @@ namespace Ex01
             yEgg = this.ClientSize.Height - pbEgg.Height;
             xDeltaBasket = 0;
             tmEgg.Stop();
+            tmChicken.Stop();
             lblGameOver.Visible = true;
         }
 
